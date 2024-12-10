@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Book {
+private:
+    string title;
+    string author;
+    double price;
+
+public:
+    Book(string t, string a, double p) {
+        title = t;
+        author = a;
+        price = p;
+    }
+
+    void displayDetails() {
+        cout << "Book Details:" << endl;
+        cout << "Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Price: $" << price << endl << endl;
+    }
+};
+
+int main() {
+    Book book1("The Psychology of Money", "Morgan Housel", 20.99);
+
+    Book book2("Atomic Habits", "James Clear", 17.49);
+
+    cout << "Details of Book 1:" << endl;
+    book1.displayDetails();
+
+    cout << "Details of Book 2:" << endl;
+    book2.displayDetails();
+
+    return 0;
+}
